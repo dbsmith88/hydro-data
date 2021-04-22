@@ -10,10 +10,14 @@ plt.style.use('seaborn-white')
 
 class Configs:
 
-    HMS_BASE_URL = os.getenv("HMS_URL", "https://ceamdev.ceeopdev.net/hms/rest/api/v3/")
-    HMS_DATA_URL = os.getenv("HMS_DATA", "https://ceamdev.ceeopdev.net/hms/rest/api/v2/hms/data?job_id=")
-    HMS_INFO_URL = os.getenv("HMS_INFO", "https://ceamdev.ceeopdev.net/hms/rest/api/info/catchment?comid=")
-    HMS_COOKIE = {'sessionid': 'b5c5ev7usauevf2nro7e8mothmekqsnj'}
+    # HMS_BASE_URL = os.getenv("HMS_URL", "https://ceamdev.ceeopdev.net/hms/rest/api/v3/")
+    # HMS_DATA_URL = os.getenv("HMS_DATA", "https://ceamdev.ceeopdev.net/hms/rest/api/v2/hms/data?job_id=")
+    # HMS_INFO_URL = os.getenv("HMS_INFO", "https://ceamdev.ceeopdev.net/hms/rest/api/info/catchment?comid=")
+    # HMS_COOKIE = {'sessionid': 'b5c5ev7usauevf2nro7e8mothmekqsnj'}
+    HMS_BASE_URL = os.getenv("HMS_URL", "https://qedlinux1stg.aws.epa.gov//hms/rest/api/v3/")
+    HMS_DATA_URL = os.getenv("HMS_DATA", "https://qedlinux1stg.aws.epa.gov/hms/rest/api/v2/hms/data?job_id=")
+    HMS_INFO_URL = os.getenv("HMS_INFO", "https://qedlinux1stg.aws.epa.gov/hms/rest/api/info/catchment?comid=")
+    HMS_COOKIE = {}
 
     DB_PATH = os.path.join(".", "catchment-data.sqlite3")
     GAGE_PATH = os.path.join(".", "data", "camels-gages.csv")

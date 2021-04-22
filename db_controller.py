@@ -11,15 +11,20 @@ class DBController:
     FORCINGDATA_COUNT = 271751
 
     def __init__(self):
+        self.connected = False
         self.conn = self.connect()
 
     def connect(self):
+        self.connected = True
         return sqlite3.connect(Configs.DB_PATH, timeout=self.TIMEOUT)
 
     def close(self):
+        self.connected = False
         self.conn.close()
 
     def save(self, catchment, close=True):
+        if not self.connected:
+            self.conn = self.connect()
         self.save_forcing(catchment)
         self.save_streamflow(catchment)
         self.save_catchment_data(catchment)
