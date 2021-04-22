@@ -135,5 +135,5 @@ dmypy.json
 
 data/usgs_streamflow/
 
-catchment-data.sqlite3
-catchment-data.zip
+.sqlite3
+.zip
