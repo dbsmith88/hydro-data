@@ -134,3 +134,6 @@ dmypy.json
 .idea/
 
 data/usgs_streamflow/
+
+catchment-data.sqlite3
+catchment-data.zip
